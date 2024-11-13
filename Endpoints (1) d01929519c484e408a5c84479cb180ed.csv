@@ -1,0 +1,89 @@
+﻿Path URL,Entity,HTTP Methods,Description,Success Response
+"/api/agencies
+  ",Agency,POST,Add new Agency details in DB.,"String: Record Created Successfully
+  "
+/api/agencies/{agency_id},Agency,GET,Search Agency details by agency_id,Agency Object
+"/api/agencies/{agency_id}
+  ",Agency,PUT,Update Agency details by agency_id,"String: Record Updated Successfully.
+  "
+/api/agencies/{agency_id},Agency,DELETE,Remove Agency details.,String: Record Deleted Successfully.
+"  /api/agencies/offices/{agency_id}",Agency,GET,Search all offices of an Agency by agency_id,Collection of offices.
+" /api/agencies/offices/{office_id}",Agency,GET,Search office by office_id,Office object.
+" /api/agencies/offices/{office_id}  ",Agency,DELETE,Remove office details by office_id.,String: Record Deleted Successfully.
+/api/buses,Buses,POST,Add new bus details.,"String: Record Created Successfully
+  "
+"/api/buses
+  ",Buses,GET,Search all bus details.,Collection of buses.
+/api/buses,Buses,PUT,Update bus details.,String: Record Updated Successfully.
+/api/buses/{bus_id},Buses,GET,Search bus details by bus_id.,Bus Object.
+/api/buses/{bus_id},Buses,DELETE,Remove bus details by bus_id.,String: Record Deleted Successfully.
+/api/buses/office/{office_id},Buses,GET,Search all buses details by office_id.," Collection of Buses
+  "
+/api/customers,Customers,POST,Add new Customer Object in DB,"String: Record Created Successfully
+  "
+/api/customers,Customers,GET,Search all Customers.,"Collection of Customers
+  "
+/api/customers/{customer_id},Customers,GET,Search Customer by customer_id.,Customer Object.
+"/api/customers/email/{email}
+  ",Customers,GET,Search Customers by email.,Collection of Customers.
+/api/customers/phone,Customers,GET,Search Customers by phone.,Collection of Customers.
+/api/customers/city/{city),Customers,GET,Search Customers by City,Collection of Customers.
+/api/customers/country/{country},Customers,GET,Search Customers by Country,"Collection of Customers with Address
+  "
+/api/customers/update/{id}/ln,Customers,PUT,Update last name of Customer,"Customer
+  "
+/api/customers/update/{id}/email,Customers,PUT,Update email of Customer," Customer
+  "
+" /api/routes",Routes,POST,Add new Route.,"String: Record Created Successfully
+  "
+/api/routes,Routes,GET,Search all Routes.,Collection of Routes.
+/api/routes/{route_id},Routes,GET,Search Route by route_id.,Route Object
+/api/routes/fromcity/{from_city},Routes,GET,Search Routes by from_city.,"Collection of Routes. "
+/api/routes/tocity/{to_city},Routes,GET,Search Routes by to_city,Collection of Routes.
+"/api/routes/{from_city}/{to_city}
+  ",Routes,GET,Search Route by from_city and to_city.,Route Object.
+/api/trips,Trips,POST,Add new trip details.,String: Record Created Successfully
+/api/trips,Trips,GET,Search all trips details.,Collection of trips.
+/api/trips/{trip_id},Trips,GET,Search trip details by trip_id.,Trip Object.
+/api/trips,Trips,PUT,Update trip details.,String: Record Updated Successfully
+/api/trips/from_city/{from_city},Trips,GET,Search trips details by from_city.,Collection of trips.
+/api/trips/to_city/{to_city},Trips,GET,Search trips details by to_city.,Collection of trips.
+/api/trips/bus_type/{type},Trips,GET,"Search trips bus type. ",Collection trips.
+"/api/store/bus_type/{type}/trip_date/{trip_date}
+  ",Trips,GET,Search trips by bus type and trip_date,"Collection of Staff
+  "
+/api/reviews,Reviews,POST,Add new review.,"String: Record Created Successfully
+  "
+"/api/reviews
+  ",Reviews,GET,Search all reviews.,Collection of reviews.
+/api/reviews,Reviews,PUT,Update review details.,String: Record Updated Successfully.
+/api/reviews,Reviews,DELETE,Remove review details.,String: Record Deleted Successfully.
+/api/reviews/tripid/{trip_id},Reviews,GET,Search reviews by trip_id.,Collection of reviews.
+/api/payment,payment,POST,Add new Payment details.,"String: Record Created Successfully
+  "
+/api/payment,payment,GET,Search all payment details.,Collection of payments.
+/api/payment/{payment_id},payment,GET,Search payment details by payment_id.,Payment Object.
+/api/payment/customer/{customer_id},payment,GET,Search payment details by customer_id.,Collection of payments.
+/api/payment/agency/{agency_id},payment,GET,Search payment details by agency_id.,Collection of payments.
+/api/payment/office/{office_id},payment,GET,Search payment details by agency_id.,Collection of payments.
+/api/trips/{trip_id},Trips,DELETE,Remove trip details by trip_id.,String: Record Deleted Successfully
+/api/reviews/{review_id},Reviews,GET,Search review by review_id.,Review object.
+,,,,
+/api/reviews/office/{office_id},Reviews,GET,Search reviews by office_id.,Collection of reviews.
+/api/trips/{from_city}/{to_city}/{trip_date}/{bus_type},Trips,GET,"Search trips details by from_city, to_city, trip_date and bus type.",Collection of trips.
+/api/reviews/customerid/{customer_id},Reviews,GET,Search reviews by customer_id.,Collection of reviews.
+/api/trips/{from_city}/{to_city}/{trip_date},Trips,GET,"Search trips details by from_city, to_city and trip_date",Collection of trips.
+,Buses,,,
+/api/reviews/agency/{agency_id},Reviews,GET,Search reviews by agency_id.,Collection of reviews.
+" /api/agencies/offices/{office_id}",Agency,PUT,Update Office details by office_id.,String: Record Updated Successfully.
+/api/trips/trip_date/{trip_date},Trips,GET,Search trips details by trip_date,Collection of trips.
+/api/reviews/driver/{driver_id},Reviews,GET,Search reviews by driver_id.,Collection of reviews.
+/api/customers,Customers,PUT,Update customer details.,String: Record Updated Successfully
+/api/agencies,Agency,GET,Search all agencies details.,Collection of agencies.
+/api/customers/state/{state),Customers,GET,Search Customer by State.,Collection of Customers.
+,Reviews,,,
+/api/agencies/offices,Agency,GET,Serach all offices.,Collection of offices.
+/api/agencies/addoffice,Agency,POST,Add new branch office of an agency.,String: Record Created Successfully.
+,payment,,,
+/api/routes,Routes,PUT,Update Route details.,String: Record Updated Successfully
+/api/routes/{route_id},Routes,DELETE,Remove Route.,String: Record Deleted Successfully.
